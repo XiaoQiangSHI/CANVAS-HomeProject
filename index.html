@@ -4,382 +4,152 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images">
-  <meta name="description" content="CANVAS reconstructs animatable 3D Gaussian head avatars from any number of input images from 1 to K using evidence accumulation on a canonical FLAME support.">
-  <meta name="keywords" content="CANVAS, 3D Gaussian Splatting, head avatar, any-shot reconstruction, animatable avatar, FLAME, portrait animation">
+  <meta name="description" content="Anonymous project page for CANVAS, an any-shot method for animatable 3D Gaussian head avatars from 1 to K input images.">
   <meta name="author" content="Anonymous Authors">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="CANVAS Project Page">
+  <meta name="robots" content="noindex, nofollow">
   <meta property="og:title" content="CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images">
-  <meta property="og:description" content="Any-shot animatable 3D Gaussian head avatars from one to many images.">
-  <meta property="og:url" content="https://anonymous.4open.science/w/CANVAS-HomeProject-FC41/">
-  <meta property="og:image" content="static/images/carousel1.jpg">
-  <meta property="og:image:alt" content="CANVAS project preview">
-
+  <meta property="og:description" content="Anonymous submission project page with method figures and qualitative video comparisons.">
+  <meta property="og:image" content="images/CANVAS_METHOD-preview.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images">
-  <meta name="twitter:description" content="A feed-forward any-shot framework for animatable 3D Gaussian head avatars.">
-  <meta name="twitter:image" content="static/images/carousel1.jpg">
-
-  <meta name="citation_title" content="CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images">
-  <meta name="citation_author" content="Anonymous Authors">
-  <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="Anonymous Submission">
-
-  <meta name="theme-color" content="#0f766e">
-  <meta name="msapplication-TileColor" content="#0f766e">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
+  <meta name="twitter:description" content="Anonymous submission project page for any-shot animatable 3D Gaussian head avatars.">
+  <meta name="twitter:image" content="images/CANVAS_METHOD-preview.png">
+  <meta name="theme-color" content="#173a37">
   <title>CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images</title>
 
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images",
-    "description": "CANVAS reconstructs animatable 3D Gaussian head avatars from any number of input images from 1 to K using evidence accumulation on a canonical FLAME support.",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "Anonymous Authors"
-      }
-    ],
-    "datePublished": "2026-03-25",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Anonymous Submission"
-    },
-    "url": "https://anonymous.4open.science/w/CANVAS-HomeProject-FC41/",
-    "image": "static/images/carousel1.jpg",
-    "keywords": ["3D Gaussian Splatting", "animatable head avatar", "any-shot reconstruction", "FLAME"],
-    "abstract": "Reconstructing a photo-realistic, animatable head avatar from only a few images is crucial for scalable digital human creation. 3D Gaussian splatting enables efficient rendering, yet existing Gaussian avatar pipelines largely occupy two ends of the spectrum: optimization-heavy methods that require long videos, and feed-forward methods tailored to a fixed number of inputs, typically one image. This leaves open the any-shot 1-K regime, where the number of available source images varies across examples and additional inputs should be exploited whenever they provide useful evidence. We present CANVAS, a feed-forward framework that reconstructs unseen identities without per-identity optimization by casting any-shot reconstruction as evidence accumulation on a fixed canonical support.",
-    "isAccessibleForFree": true,
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://anonymous.4open.science/w/CANVAS-HomeProject-FC41/"
-    }
-  }
-  </script>
 </head>
 <body>
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="Open page guide">
-      <i class="fas fa-compass"></i>
-      Page Guide
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>Navigate This Page</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close page guide">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <a href="#abstract" class="work-item">
-          <div class="work-info">
-            <h5>Abstract</h5>
-            <p>Problem setup, any-shot setting, and the core CANVAS formulation.</p>
-            <span class="work-venue">Overview</span>
-          </div>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="#highlights" class="work-item">
-          <div class="work-info">
-            <h5>Method Highlights</h5>
-            <p>Canonical support, visibility-aware aggregation, and lightweight refinement.</p>
-            <span class="work-venue">Method</span>
-          </div>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="#gallery" class="work-item">
-          <div class="work-info">
-            <h5>Visual Results</h5>
-            <p>Qualitative renderings and appearance fidelity snapshots.</p>
-            <span class="work-venue">Results</span>
-          </div>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="#bibtex" class="work-item">
-          <div class="work-info">
-            <h5>BibTeX</h5>
-            <p>Anonymous citation block for the project homepage.</p>
-            <span class="work-venue">Citation</span>
-          </div>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
+  <header class="site-header">
+    <div class="shell topbar">
+      <a class="brand-mark" href="#top">CANVAS</a>
+      <nav class="topnav" aria-label="Section navigation">
+        <a href="#method">Method</a>
+        <a href="#figures">Figures</a>
+        <a href="#video-cross">Cross</a>
+        <a href="#video-self">Self</a>
+        <a href="#bibtex">BibTeX</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <main id="main-content">
-    <section class="hero canvas-hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="hero-shell">
-            <div class="hero-copy has-text-centered">
-              <p class="hero-kicker">Anonymous Project Homepage</p>
-              <h1 class="title is-1 publication-title">CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images</h1>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">Anonymous Authors</span>
+  <main id="top">
+    <section class="masthead centered-hero">
+      <div class="shell masthead-grid">
+        <div class="masthead-copy">
+          <p class="section-kicker">Anonymous Submission</p>
+          <h1>CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images</h1>
+          <p class="identity-line">Anonymous Authors</p>
+          <p class="masthead-summary">
+            CANVAS reconstructs animatable 3D Gaussian head avatars from a variable number of source images, accumulating evidence from 1 to K views on a canonical Gaussian support for efficient reenactment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="method">
+      <div class="shell section-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Method Overview</p>
+          <h2>Method Overview</h2>
+        </div>
+        <div class="method-layout centered-method">
+          <a class="method-figure" href="images/CANVAS_METHOD.pdf" target="_blank" rel="noopener">
+            <img src="images/CANVAS_METHOD-preview.png" alt="Preview of the CANVAS method figure">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="figures">
+      <div class="shell section-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Qualitative Figures</p>
+          <h2>Qualitative Figures</h2>
+        </div>
+        <div class="figure-grid">
+          <article class="figure-card">
+            <a class="figure-link" href="images/cross.pdf" target="_blank" rel="noopener">
+              <img src="images/cross-preview.png" alt="Preview of cross-identity qualitative results">
+            </a>
+            <div class="figure-copy">
+              <h3>Cross Results</h3>
+              <p>Cross-identity qualitative comparisons.</p>
+            </div>
+          </article>
+
+          <article class="figure-card">
+            <a class="figure-link" href="images/self.pdf" target="_blank" rel="noopener">
+              <img src="images/self-preview.png" alt="Preview of self qualitative results">
+            </a>
+            <div class="figure-copy">
+              <h3>Self Results</h3>
+              <p>Self reenactment qualitative comparisons.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="video-library">
+      <div class="shell section-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Video Library</p>
+          <h2>Video Library</h2>
+          <p class="section-intro">Watch selected comparisons in a compact carousel layout.</p>
+        </div>
+
+        <div class="video-library-grid">
+          <section class="results-showcase" id="video-cross" data-carousel-mode="cross">
+            <div class="results-header">
+              <h3>Cross-reenacted Results</h3>
+            </div>
+            <div class="results-carousel">
+              <button class="results-arrow results-arrow-prev" type="button" aria-label="Previous cross comparison">&lsaquo;</button>
+              <div class="results-viewport">
+                <div class="results-track"></div>
               </div>
-              <div class="publication-venue">Any-shot reconstruction from 1 to K input images</div>
-              <p class="hero-summary">
-                CANVAS targets the missing middle ground between single-image feed-forward avatars and optimization-heavy video pipelines, building a single model that can exploit as little as one image and as many as K images when extra evidence is available.
-              </p>
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="#abstract" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-scroll"></i></span>
-                    <span>Abstract</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="#highlights" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-layer-group"></i></span>
-                    <span>Highlights</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="#gallery" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-images"></i></span>
-                    <span>Results</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-quote-right"></i></span>
-                    <span>BibTeX</span>
-                  </a>
-                </span>
+              <button class="results-arrow results-arrow-next" type="button" aria-label="Next cross comparison">&rsaquo;</button>
+            </div>
+            <div class="results-dots"></div>
+          </section>
+
+          <section class="results-showcase" id="video-self" data-carousel-mode="self">
+            <div class="results-header">
+              <h3>Self-reenacted Results</h3>
+            </div>
+            <div class="results-carousel">
+              <button class="results-arrow results-arrow-prev" type="button" aria-label="Previous self comparison">&lsaquo;</button>
+              <div class="results-viewport">
+                <div class="results-track"></div>
               </div>
+              <button class="results-arrow results-arrow-next" type="button" aria-label="Next self comparison">&rsaquo;</button>
             </div>
-
-            <div class="hero-panel">
-              <div class="hero-panel-grid">
-                <article class="hero-metric">
-                  <span class="hero-metric-label">Input Regime</span>
-                  <strong>Any-shot inputs</strong>
-                  <p>One trained model adapts to 1 through K source images without changing the architecture.</p>
-                </article>
-                <article class="hero-metric">
-                  <span class="hero-metric-label">Representation</span>
-                  <strong>3D Gaussian avatar</strong>
-                  <p>A multi-resolution UV Gaussian atlas anchored on FLAME supports efficient and expressive rendering.</p>
-                </article>
-                <article class="hero-metric">
-                  <span class="hero-metric-label">Aggregation</span>
-                  <strong>Evidence accumulation</strong>
-                  <p>Geometry-guided projection and visibility-aware fusion combine multi-view evidence on a canonical support.</p>
-                </article>
-              </div>
-            </div>
-          </div>
+            <div class="results-dots"></div>
+          </section>
         </div>
       </div>
     </section>
 
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <div class="publication-banner">
-            <video poster="" autoplay controls muted loop preload="metadata">
-              <source src="static/videos/banner_video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <h2 class="subtitle has-text-centered teaser-caption">
-            CANVAS reconstructs animatable head avatars for unseen identities, scales from sparse to richer image evidence, and maintains the efficiency of feed-forward Gaussian rendering.
-          </h2>
+    <section class="section-block" id="bibtex">
+      <div class="shell section-shell">
+        <div class="section-heading">
+          <p class="section-kicker">BibTeX</p>
+          <h2>BibTeX</h2>
         </div>
-      </div>
-    </section>
-
-    <section class="section hero is-light" id="abstract">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified abstract-card">
-              <p>
-                Reconstructing a photo-realistic, animatable head avatar from only a few images is crucial for scalable digital human creation. 3D Gaussian splatting enables efficient rendering, yet existing Gaussian avatar pipelines largely occupy two ends of the spectrum: optimization-heavy methods that require long videos, and feed-forward methods tailored to a fixed number of inputs, typically one image.
-              </p>
-              <p>
-                This leaves open the any-shot 1-K regime, where the number of available source images varies across examples and additional inputs should be exploited whenever they provide useful evidence. We present CANVAS, a feed-forward framework that reconstructs unseen identities without per-identity optimization by casting any-shot reconstruction as evidence accumulation on a fixed canonical support.
-              </p>
-              <p>
-                Given per-image FLAME coefficients and camera poses, CANVAS constructs a multi-resolution UV Gaussian atlas on the FLAME surface, lifts multi-scale foundation features from each image onto shared anchors via geometry-guided projection, and fuses them with a visibility-aware, permutation-invariant aggregation module. For high-fidelity appearance, CANVAS renders latent-feature Gaussians and decodes them with a lightweight refiner. Experiments show that the model outperforms strong one-shot baselines and scales gracefully as more source frames are provided.
-              </p>
-            </div>
-          </div>
+        <div class="bibtex-card">
+          <pre id="bibtex-code"></pre>
+          <button class="copy-bibtex-btn" type="button" id="copy-bibtex-btn">Copy BibTeX</button>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="highlights">
-      <div class="container is-max-desktop">
-        <div class="section-heading has-text-centered">
-          <p class="section-label">Method</p>
-          <h2 class="title is-3">Method Highlights</h2>
-        </div>
-        <div class="columns is-multiline feature-grid">
-          <div class="column is-6">
-            <article class="feature-card">
-              <p class="feature-index">01</p>
-              <h3>Any-shot inputs</h3>
-              <p>CANVAS is designed for the full 1-K regime, so a single feed-forward model can consume one image or a larger set without redesigning the pipeline for each shot count.</p>
-            </article>
-          </div>
-          <div class="column is-6">
-            <article class="feature-card">
-              <p class="feature-index">02</p>
-              <h3>Canonical FLAME support</h3>
-              <p>A multi-resolution UV Gaussian atlas anchored to FLAME gives the model a stable surface-aligned support for aggregating evidence across views.</p>
-            </article>
-          </div>
-          <div class="column is-6">
-            <article class="feature-card">
-              <p class="feature-index">03</p>
-              <h3>Visibility-aware aggregation</h3>
-              <p>Geometry-guided lifting and permutation-invariant fusion select and combine complementary observations instead of overfitting to a fixed camera pattern.</p>
-            </article>
-          </div>
-          <div class="column is-6">
-            <article class="feature-card">
-              <p class="feature-index">04</p>
-              <h3>High-fidelity rendering</h3>
-              <p>Latent-feature Gaussians paired with a lightweight refiner preserve the efficiency of Gaussian splatting while improving appearance quality for animation.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero is-small gallery-section" id="gallery">
-      <div class="hero-body">
-        <div class="container">
-          <div class="section-heading has-text-centered">
-            <p class="section-label">Results</p>
-            <h2 class="title is-3">Visual Results</h2>
-          </div>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/carousel1.jpg" alt="CANVAS qualitative result 1" loading="lazy">
-              <h2 class="subtitle has-text-centered">Identity reconstruction remains stable under sparse-image input and novel expression control.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/carousel2.jpg" alt="CANVAS qualitative result 2" loading="lazy">
-              <h2 class="subtitle has-text-centered">More source evidence improves coverage and appearance consistency without changing the model interface.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/carousel3.jpg" alt="CANVAS qualitative result 3" loading="lazy">
-              <h2 class="subtitle has-text-centered">The canonical support helps align multi-view evidence onto a unified animatable head representation.</h2>
-            </div>
-            <div class="item">
-              <img src="static/images/carousel4.jpg" alt="CANVAS qualitative result 4" loading="lazy">
-              <h2 class="subtitle has-text-centered">CANVAS preserves high-frequency appearance while remaining efficient for feed-forward avatar synthesis.</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero is-small is-light media-section" id="videos">
-      <div class="hero-body">
-        <div class="container">
-          <div class="section-heading has-text-centered">
-            <p class="section-label">Animation</p>
-            <h2 class="title is-3">Animated Reconstructions</h2>
-          </div>
-          <div class="video-strip carousel results-carousel">
-            <div class="item item-video1">
-              <video controls muted loop preload="metadata">
-                <source src="static/videos/carousel1.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">Avatar animation from sparse observations.</h2>
-            </div>
-            <div class="item item-video2">
-              <video controls muted loop preload="metadata">
-                <source src="static/videos/carousel2.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">More views provide richer spatial evidence for synthesis.</h2>
-            </div>
-            <div class="item item-video3">
-              <video controls muted loop preload="metadata">
-                <source src="static/videos/carousel3.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">Feed-forward Gaussian rendering enables efficient playback.</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="bibtex">
-      <div class="container is-max-desktop content">
-        <div class="bibtex-header">
-          <h2 class="title">BibTeX</h2>
-          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-            <i class="fas fa-copy"></i>
-            <span class="copy-text">Copy</span>
-          </button>
-        </div>
-        <pre id="bibtex-code"><code>@misc{canvas2026,
-  title={CANVAS: Any-Shot Animatable 3D Gaussian Head Avatars from 1--K Images},
-  author={Anonymous Authors},
-  year={2026},
-  note={Anonymous submission},
-  url={https://anonymous.4open.science/w/CANVAS-HomeProject-FC41/}
-}</code></pre>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This homepage is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noreferrer">Academic Project Page Template</a> and restyled for the CANVAS anonymous project page. The current version focuses on the paper identity, abstract, method highlights, and qualitative media already included in this repository.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <script src="static/js/media-manifest.js"></script>
+  <script src="static/js/index.js"></script>
 </body>
 </html>
