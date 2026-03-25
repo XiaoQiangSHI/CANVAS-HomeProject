@@ -8,6 +8,8 @@ INDEX_CSS = (ROOT / 'static' / 'css' / 'index.css').read_text(encoding='utf-8')
 INDEX_JS = (ROOT / 'static' / 'js' / 'index.js').read_text(encoding='utf-8')
 MEDIA_MANIFEST = (ROOT / 'static' / 'js' / 'media-manifest.js')
 MEDIA_MANIFEST_TEXT = MEDIA_MANIFEST.read_text(encoding='utf-8') if MEDIA_MANIFEST.exists() else ''
+FAVICON_SVG = ROOT / 'static' / 'images' / 'favicon.svg'
+FAVICON_ICO = ROOT / 'static' / 'images' / 'favicon.ico'
 
 
 class HomePageContentTest(unittest.TestCase):
@@ -44,6 +46,12 @@ class HomePageContentTest(unittest.TestCase):
             'static/js/media-manifest.js',
         ]:
             self.assertIn(asset, INDEX_HTML)
+
+    def test_homepage_references_new_favicon_assets(self):
+        self.assertTrue(FAVICON_SVG.exists(), 'favicon.svg should exist')
+        self.assertTrue(FAVICON_ICO.exists(), 'favicon.ico should exist')
+        self.assertIn('static/images/favicon.svg', INDEX_HTML)
+        self.assertIn('static/images/favicon.ico', INDEX_HTML)
 
     def test_homepage_top_navigation_matches_current_sections(self):
         for anchor in [
