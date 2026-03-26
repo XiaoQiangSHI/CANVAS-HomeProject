@@ -23,6 +23,7 @@ class HomePageContentTest(unittest.TestCase):
 
     def test_homepage_contains_new_editorial_sections(self):
         for text in [
+            'Demo Video',
             'Method Overview',
             'Qualitative Figures',
             'Video Library',
@@ -37,6 +38,7 @@ class HomePageContentTest(unittest.TestCase):
 
     def test_homepage_references_local_figures_and_video_library(self):
         for asset in [
+            'videos/demo.mp4',
             'images/CANVAS_METHOD.pdf',
             'images/cross.pdf',
             'images/self.pdf',
@@ -46,6 +48,12 @@ class HomePageContentTest(unittest.TestCase):
             'static/js/media-manifest.js',
         ]:
             self.assertIn(asset, INDEX_HTML)
+
+    def test_homepage_places_demo_video_near_top(self):
+        self.assertIn('<section class="section-block" id="demo">', INDEX_HTML)
+        self.assertIn('class="demo-video"', INDEX_HTML)
+        self.assertIn('.demo-shell', INDEX_CSS)
+        self.assertIn('.demo-video', INDEX_CSS)
 
     def test_homepage_references_new_favicon_assets(self):
         self.assertTrue(FAVICON_SVG.exists(), 'favicon.svg should exist')
